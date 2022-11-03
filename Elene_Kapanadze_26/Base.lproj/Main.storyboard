@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xol-sq-J6V">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notes-->
+        <scene sceneID="zGG-7n-7ee">
+            <objects>
+                <navigationController id="Y9X-BT-XHf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Notes" image="note.text" catalog="system" id="QT1-yt-l6T"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="v9A-pv-5kW">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2YA-TA-EHs" kind="relationship" relationship="rootViewController" id="IkP-g9-NCc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l3s-I0-Nsu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-304" y="522"/>
+        </scene>
+        <!--Notes-->
+        <scene sceneID="Bbl-oN-RyG">
+            <objects>
+                <viewController storyboardIdentifier="NotesViewController" id="2YA-TA-EHs" customClass="NotesViewController" customModule="Elene_Kapanadze_26" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kQc-dg-yN8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="v0z-kO-bhu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Notes" id="UTm-u9-nRD"/>
+                    <connections>
+                        <segue destination="SXH-Li-FNu" kind="show" identifier="noteDetails" id="bhC-yD-pIc"/>
+                        <segue destination="SXH-Li-FNu" kind="show" identifier="newNote" id="6L4-a8-RP4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dfh-ft-P3h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-313" y="1276"/>
+        </scene>
+        <!--New Note-->
+        <scene sceneID="gYl-iV-xyh">
+            <objects>
+                <viewController storyboardIdentifier="AddNoteViewController" id="SXH-Li-FNu" customClass="AddNoteViewController" customModule="Elene_Kapanadze_26" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gsf-6c-D1r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="OW7-q6-prR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Note" id="i95-Jn-M7g"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uSE-FU-8vq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="529" y="1276"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="mcF-e7-A23">
+            <objects>
+                <tabBarController id="Xol-sq-J6V" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uue-JA-lDz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Y9X-BT-XHf" kind="relationship" relationship="viewControllers" id="Ngz-JF-rcd"/>
+                        <segue destination="S4Q-uh-ZkE" kind="relationship" relationship="viewControllers" id="oPS-K7-QKw"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fas-rM-QMx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="751" y="-236"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="h1l-YJ-4v4">
+            <objects>
+                <navigationController id="S4Q-uh-ZkE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorites" image="star.fill" catalog="system" id="jgQ-NL-MuH"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KM6-Xg-658">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="SAl-If-fnX" kind="relationship" relationship="rootViewController" id="Vga-Op-bPN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bah-WL-aHi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1668" y="522"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="Gs6-su-M0Q">
+            <objects>
+                <viewController storyboardIdentifier="FavoritesViewController" id="SAl-If-fnX" customClass="FavoritesViewController" customModule="Elene_Kapanadze_26" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gay-wh-JKY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="cCr-E6-Nel"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Favorites" id="cPW-Gw-veH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="46f-y2-fgK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1667" y="1276"/>
+        </scene>
+        <!--Edit Note View Controller-->
+        <scene sceneID="23o-sz-Abm">
+            <objects>
+                <viewController storyboardIdentifier="EditNoteViewController" id="HPW-7G-jMx" customClass="EditNoteViewController" customModule="Elene_Kapanadze_26" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G52-7w-8m2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="dxE-EQ-Y25"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o9r-kL-9yR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1409" y="2050"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="bhC-yD-pIc"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="note.text" catalog="system" width="128" height="106"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
